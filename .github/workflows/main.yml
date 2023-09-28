@@ -15,6 +15,8 @@ jobs:
         working-directory: ./scripts
     steps:
       - name: Check out the repository to the runner
-        uses: actions/checkout@v4  
+        uses: actions/checkout@v4
       - name: Run a script
-        run: ./install.sh
+        run: |
+          chmod +x install.sh
+          bash install.sh
